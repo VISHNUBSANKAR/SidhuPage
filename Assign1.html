@@ -6,39 +6,48 @@
 
 <body>
 <h1>
-<b><u>Welcome to 
-		<em>Sidhu's</em> Website</u>
-</b>
+  <b><u>Welcome to 
+    <em>Sidhu's</em> Website</u>
+  </b>
 </h1>
 
 <p>
 <strong>
-a<sup>2</sup> + b<sup>2</sup> +2ab=(a+b)<sup>2</sup><br>
-2H<sub>2</sub> + O<sub>2</sub>=2H<sub>2</sub>O<br>
+  a<sup>2</sup> + b<sup>2</sup> + 2ab = (a+b)<sup>2</sup><br>
+  2H<sub>2</sub> + O<sub>2</sub> = 2H<sub>2</sub>O<br>
 </strong>
 
-<mark>Sidhu, Aiden and Shloka</mark> are friends at school.<br>
+<mark>Sidhu, Aiden and Shloka</mark> are friends at school.<br><br>
 
-<button onclick="showDisclaimer()">Click Me</button>
-<h3>What is your age, Sidhu?<input type="number" min="5" max="100"></h3><br>
+<button type="button" onclick="showDisclaimer()">Click Me</button><br><br><br>
 
-	<input type="checkbox">Firstcry</input><br><br><br>
+<h3>
+  What is your age, Sidhu?
+  <input type="number" min="5" max="100">
+</h3><br>
 
-<input type="submit" value="Submit here"><br>
+<label>
+  <input type="checkbox"> Firstcry
+</label><br><br><br>
 
-    <!-- Disclaimer (hidden initially) -->
-   
+<!-- ✅ Proper form with submit -->
+<form id="sidhuForm">
+  <input type="submit" value="Submit here">
+</form>
 
 </p>
- 
-    
-    <script>
-        function showDisclaimer() {
-            window.alert("*Disclaimer: This page is for demonstration purposes only.");
-        }
-    </script>
+
+<script>
+  function showDisclaimer() {
+    window.alert("*Disclaimer: This page is for demonstration purposes only.");
+  }
+
+  // ✅ Attach event listener after page loads
+  document.getElementById("sidhuForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // stops the form from reloading the page
+    window.alert("✅ You have successfully submitted!");
+  });
+</script>
 
 </body>
-
 </html>
-
