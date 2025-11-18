@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fart Sound lol</title>
+</head>
+<body>
+
+<hr style="height: 4px; background-color:red; border: none;">
+<hr style="height: 4px; background-color: blue; border: none;">
+
+<div class="section">
+  <h2>What Sound Does a Gas Make?</h2>
+  <button class="sound-btn" onclick=playSound()>Press to Hear!</button>
+  <audio id="pigSound" src="gas.mp3"></audio>
+</div>
+
+<script>
+  function playSound() {
+    const sound = document.getElementById("pigSound");
+    sound.currentTime = 0;
+    sound.play().catch(err => console.log("Error playing sound:", err));
+  }
+</script>
+
+</body>
+</html>
